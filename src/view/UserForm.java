@@ -61,19 +61,19 @@ public class UserForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        northPnl.setBackground(new java.awt.Color(255, 153, 153));
+        northPnl.setBackground(new java.awt.Color(153, 204, 255));
         northPnl.setPreferredSize(new java.awt.Dimension(90, 40));
         northPnl.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 12));
         jPanel1.add(northPnl, java.awt.BorderLayout.NORTH);
 
-        eastPnl.setBackground(new java.awt.Color(0, 204, 255));
+        eastPnl.setBackground(new java.awt.Color(153, 204, 255));
         eastPnl.setPreferredSize(new java.awt.Dimension(150, 490));
         eastPnl.setLayout(new java.awt.GridLayout(9, 1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -88,7 +88,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel2);
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel3.setBackground(new java.awt.Color(153, 204, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -103,7 +103,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel3);
 
-        jPanel4.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(153, 204, 255));
         jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
         saveBtn.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
@@ -120,7 +120,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel4);
 
-        jPanel5.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel5.setBackground(new java.awt.Color(153, 204, 255));
 
         editBtn.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         editBtn.setText("Módosítás");
@@ -130,7 +130,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
         jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 0));
 
         delBtn.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
@@ -141,7 +141,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel6);
 
-        jPanel7.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel7.setBackground(new java.awt.Color(153, 204, 255));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -156,7 +156,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel7);
 
-        jPanel8.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel8.setBackground(new java.awt.Color(153, 204, 255));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -171,7 +171,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel8);
 
-        jPanel9.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel9.setBackground(new java.awt.Color(153, 204, 255));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -186,7 +186,7 @@ public class UserForm extends javax.swing.JFrame {
 
         eastPnl.add(jPanel9);
 
-        jPanel10.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel10.setBackground(new java.awt.Color(153, 204, 255));
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -203,21 +203,23 @@ public class UserForm extends javax.swing.JFrame {
 
         jPanel1.add(eastPnl, java.awt.BorderLayout.EAST);
 
-        southPnl.setBackground(new java.awt.Color(51, 204, 255));
+        southPnl.setBackground(new java.awt.Color(153, 204, 255));
         southPnl.setMinimumSize(new java.awt.Dimension(336, 40));
         southPnl.setPreferredSize(new java.awt.Dimension(769, 40));
         southPnl.setLayout(new java.awt.GridLayout(1, 3));
 
-        jPanel16.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel16.setBackground(new java.awt.Color(153, 204, 255));
         jPanel16.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel16.setPreferredSize(new java.awt.Dimension(211, 40));
         jPanel16.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 20, 0));
 
+        StatusLbl.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         StatusLbl.setText("jLabel1");
         jPanel16.add(StatusLbl);
 
         exitBtn.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         exitBtn.setText("Kilépés");
+        exitBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBtn.setPreferredSize(new java.awt.Dimension(90, 30));
         jPanel16.add(exitBtn);
 
@@ -225,7 +227,7 @@ public class UserForm extends javax.swing.JFrame {
 
         jPanel1.add(southPnl, java.awt.BorderLayout.SOUTH);
 
-        westPnl.setBackground(new java.awt.Color(0, 204, 255));
+        westPnl.setBackground(new java.awt.Color(153, 204, 255));
         westPnl.setPreferredSize(new java.awt.Dimension(5, 491));
 
         javax.swing.GroupLayout westPnlLayout = new javax.swing.GroupLayout(westPnl);
@@ -241,7 +243,7 @@ public class UserForm extends javax.swing.JFrame {
 
         jPanel1.add(westPnl, java.awt.BorderLayout.LINE_START);
 
-        centerPnl.setBackground(new java.awt.Color(0, 204, 255));
+        centerPnl.setBackground(new java.awt.Color(153, 204, 255));
         centerPnl.setLayout(new java.awt.BorderLayout());
 
         jPanel11.setBackground(new java.awt.Color(0, 204, 255));
@@ -260,7 +262,7 @@ public class UserForm extends javax.swing.JFrame {
 
         centerPnl.add(jPanel11, java.awt.BorderLayout.PAGE_START);
 
-        jPanel12.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel12.setBackground(new java.awt.Color(153, 204, 255));
         jPanel12.setPreferredSize(new java.awt.Dimension(5, 320));
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
@@ -276,7 +278,7 @@ public class UserForm extends javax.swing.JFrame {
 
         centerPnl.add(jPanel12, java.awt.BorderLayout.LINE_START);
 
-        jPanel13.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel13.setBackground(new java.awt.Color(153, 204, 255));
         jPanel13.setPreferredSize(new java.awt.Dimension(5, 320));
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -292,7 +294,7 @@ public class UserForm extends javax.swing.JFrame {
 
         centerPnl.add(jPanel13, java.awt.BorderLayout.LINE_END);
 
-        jPanel14.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel14.setBackground(new java.awt.Color(153, 204, 255));
         jPanel14.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel14.setPreferredSize(new java.awt.Dimension(376, 5));
 
@@ -310,15 +312,15 @@ public class UserForm extends javax.swing.JFrame {
         centerPnl.add(jPanel14, java.awt.BorderLayout.PAGE_END);
         jPanel14.getAccessibleContext().setAccessibleName("");
 
-        jPanel15.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel15.setBackground(new java.awt.Color(153, 204, 255));
         jPanel15.setPreferredSize(new java.awt.Dimension(452, 435));
         jPanel15.setLayout(new java.awt.GridLayout(1, 1));
 
-        tableTb.setBackground(new java.awt.Color(51, 204, 255));
+        tableTb.setBackground(new java.awt.Color(153, 204, 255));
         tableTb.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         tableTb.setMinimumSize(new java.awt.Dimension(82, 113));
 
-        userPnl.setBackground(new java.awt.Color(0, 204, 255));
+        userPnl.setBackground(new java.awt.Color(153, 204, 255));
         userPnl.setLayout(new java.awt.GridLayout(1, 0));
 
         userTb.setModel(new javax.swing.table.DefaultTableModel(
@@ -328,10 +330,10 @@ public class UserForm extends javax.swing.JFrame {
                 {null, null, null},
                 {null, null, null}
             },
-            new String[] {
-                "Title 1", "Title 2", "Title 3"
-        }));
-
+            new String [] {
+                "Name", "Email", "Password"
+            }
+        ));
         jScrollPane1.setViewportView(userTb);
 
         userPnl.add(jScrollPane1);
