@@ -323,15 +323,15 @@ public class UserForm extends javax.swing.JFrame {
 
         userTb.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
+            new String[] {
+                "Title 1", "Title 2", "Title 3"
+        }));
+
         jScrollPane1.setViewportView(userTb);
 
         userPnl.add(jScrollPane1);

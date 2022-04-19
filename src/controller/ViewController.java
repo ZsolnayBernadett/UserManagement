@@ -10,96 +10,126 @@ import model.ViewModel;
 import view.UserForm;
 
 public class ViewController {
-    
+
     private UserForm userFrm;
     private ViewModel viewMdl;
     private Vector<Vector<Object>> tableData;
     private DatabaseController dbCtr;
-    
-    public ViewController( DatabaseController dbCtr ) {
+
+    public ViewController(DatabaseController dbCtr) {
 
         this.dbCtr = dbCtr;
-        userFrm = new UserForm();
-        viewMdl = new ViewModel();
         start();
-        initComponents();
-        initListeners();
     }
-    
-    private void initComponents() {
-        
-        if( dbCtr.setDatabase() ){
-            userFrm.setStatusLbl( "Kapcsolat OK" );
+
+    private void initDbConnection() {
+
+        if (dbCtr.setDatabase()) {
+
+            userFrm.setStatusLbl("Kapcsolat OK");
+
+        } else {
+
+            userFrm.setStatusLbl("Nincs kapcsolat");
         }
     }
-    
+
     private void initListeners() {
-        
-        userFrm.getExitBtn().addActionListener( event -> { exit(); });
-        userFrm.getDelBtn().addActionListener( event -> { delete(); });
-        userFrm.getEditBtn().addActionListener( event -> { edit(); });
-        userFrm.getSaveBtn().addActionListener( event -> { save(); });
-        userFrm.getTableTb().addChangeListener( event -> { initTables(); });
+
+        userFrm.getExitBtn().addActionListener(event -> { exit(); });
+        userFrm.getDelBtn().addActionListener(event -> {delete(); });
+        userFrm.getEditBtn().addActionListener(event -> {edit(); });
+        userFrm.getSaveBtn().addActionListener(event -> {save(); });
+        userFrm.getTableTb().addChangeListener(event -> { initTables();});
     }
-    
+
     private void start() {
-        
+
+        userFrm = new UserForm();
+        userFrm.setTitle("Felhasználók kezelése");
+        viewMdl = new ViewModel();
+        initDbConnection();
+        initListeners();
         initTables();
-        userFrm.setVisible( true );
+        userFrm.setVisible(true);
     }
-    
+
     private void initTables() {
-        
+
         Vector<String> columnNames = new Vector<>();
-        
-        if( userFrm.getTableTb().getSelectedIndex() == 1 ) {
-            
-            columnNames = viewMdl.getUserColumnNames();
-            tableData = dbCtr.getUsers();
-            tableData.add( null );
-            TableModel tablMdl = new DefaultTableModel( tableData, columnNames);
-            userFrm.getUserTb().setModel( tablMdl );
-        }
+        tableData = new Vector<>();
+        columnNames = viewMdl.getUserColumnNames();
+        tableData = dbCtr.getUsers();
+        tableData.add(null);
+        TableModel tablMdl = new DefaultTableModel(tableData, columnNames);
+        userFrm.getUserTb().setModel(tablMdl);
+        userFrm.getUserTb().getColumnModel().getColumn(3).setWidth(0);
+        userFrm.getUserTb().getColumnModel().getColumn(3).setMinWidth(0);
+        userFrm.getUserTb().getColumnModel().getColumn(3).setMaxWidth(0);
     }
-    
+
     private void save() {
-        
-        if( userFrm.getTableTb().getSelectedIndex() == 0 ) {
-            
-            UserModel usModel = new UserModel();
-            int row = userFrm.getUserTb().getSelectedRow();
-            usModel.setName(userFrm.getUserTb().getValueAt( row, 0 ).toString());
-            usModel.setEmail(userFrm.getUserTb().getValueAt( row, 1 ).toString());
-            usModel.setPassword(userFrm.getUserTb().getValueAt( row, 2 ).toString());
-            usModel.setStatus(userFrm.getUserTb().getValueAt( row, 3 ).toString());
-            
-            boolean success = dbCtr.setUserData( usModel );
-            
-            if( success ) {
-                
-                userFrm.setStatusLbl( "Sikeres kiírás" );
-                initTables();
-                
-            }else {
-                
-                userFrm.setStatusLbl( "Írási hiba" );
-            }
+
+        UserModel userModel = new UserModel();
+        int row = userFrm.getUserTb().getSelectedRow();
+        userModel.setName(userFrm.getUserTb().getValueAt(row, 0).toString());
+        userModel.setEmail(userFrm.getUserTb().getValueAt(row, 1).toString());
+        userModel.setPassword(userFrm.getUserTb().getValueAt(row, 2).toString());
+
+        boolean success = dbCtr.setUserData(userModel);
+
+        if (success) {
+
+            userFrm.setStatusLbl("Sikeres kiírás");
+            initTables();
+
+        } else {
+
+            userFrm.setStatusLbl("Hiba az írás közben");
         }
     }
-    
-    
+
     private void edit() {
-        
-        System.out.println( "edit gomb" );
+
+        UserModel userModel = new UserModel();
+        int row = userFrm.getUserTb().getSelectedRow();
+        userModel.setName(userFrm.getUserTb().getValueAt(row, 0).toString());
+        userModel.setEmail(userFrm.getUserTb().getValueAt(row, 1).toString());
+        userModel.setPassword(userFrm.getUserTb().getValueAt(row, 2).toString());
+        userModel.setId(userFrm.getUserTb().getValueAt(row, 3).toString());
+        boolean success = dbCtr.editUserData(userModel);
+
+        if (success) {
+
+            userFrm.setStatusLbl("Sikeres módosítás");
+            initTables();
+
+        } else {
+
+            userFrm.setStatusLbl("Hiba a módosítás közben");
+        }
     }
-    
+
     private void delete() {
-        
-        System.out.println( "delete gomb" );
+
+        UserModel userModel = new UserModel();
+        int row = userFrm.getUserTb().getSelectedRow();
+        userModel.setEmail(userFrm.getUserTb().getValueAt(row, 1).toString());
+        boolean success = dbCtr.deleteUserData(userModel);
+
+        if (success) {
+
+            userFrm.setStatusLbl("Sikeres törlés");
+            initTables();
+
+        } else {
+            
+            userFrm.setStatusLbl("Hiba a törlés közben");
+        }
     }
-    
+
     private void exit() {
-        
-        System.exit( 0 );
+
+        System.exit(0);
     }
 }

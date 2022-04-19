@@ -1,14 +1,13 @@
 
 package model;
 
-
 public class UserModel {
     
+    private String id;
     private String name;
     private String email;
     private String password;
-    private String status;
-    
+
     public UserModel() {
     }
 
@@ -28,14 +27,6 @@ public class UserModel {
         this.email = email;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -43,6 +34,12 @@ public class UserModel {
     public void setPassword(String password) {
         this.password = password;
     }
-    
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

@@ -1,1 +1,1 @@
-call getUser();
+Select * from users;

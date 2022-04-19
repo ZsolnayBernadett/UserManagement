@@ -1,2 +1,1 @@
-INSERT INTO users( name, email, password, status ) VALUES
-( ?, ?, ?, ? );
+INSERT INTO users( name, email, password ) VALUES( ?, ?, ?);

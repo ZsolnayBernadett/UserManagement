@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/view/UserForm.java</file>
+            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/model/ViewModel.java</file>
+            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/controller/ViewController.java</file>
+            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/model/DatabaseConnection.java</file>
+            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/controller/Controller.java</file>
+            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/model/DatabaseModel.java</file>
+            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/model/UserModel.java</file>
+            <file>file:/C:/Users/Betti/Documents/NetBeansProjects/UserManagement/src/controller/DatabaseController.java</file>
         </group>
     </open-files>
 </project-private>
